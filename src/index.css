@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 98%;
+    --foreground: 20 25% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 25% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 25% 20%;
+
+    --primary: 258 55% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 258 40% 96%;
+    --secondary-foreground: 258 30% 25%;
+
+    --muted: 258 25% 94%;
+    --muted-foreground: 258 15% 45%;
+
+    --accent: 45 90% 60%;
+    --accent-foreground: 258 30% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 258 20% 90%;
+    --input: 258 20% 88%;
+    --ring: 258 55% 58%;
+
+    --radius: 1rem;
+
+    /* Custom PetPal tokens */
+    --cream: 258 30% 98%;
+    --cream-dark: 258 25% 94%;
+    --purple: 258 55% 58%;
+    --purple-light: 258 50% 94%;
+    --purple-dark: 258 55% 45%;
+    --purple-muted: 258 40% 75%;
+    --purple-accent: 45 90% 60%;
+    --warm-gray: 258 15% 45%;
+    --warm-dark: 258 25% 20%;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(258 25% 20% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(258 55% 58% / 0.12);
+    --shadow-elevated: 0 20px 50px -15px hsl(258 55% 58% / 0.18);
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(258 30% 98%) 0%, hsl(258 25% 96%) 100%);
+    --gradient-purple: linear-gradient(135deg, hsl(258 55% 58%) 0%, hsl(258 55% 48%) 100%);
+    --gradient-soft: linear-gradient(135deg, hsl(258 50% 65%) 0%, hsl(258 55% 58%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(258 25% 96%) 0%, hsl(258 30% 98%) 100%);
+  }
+
+  .dark {
+    --background: 258 25% 10%;
+    --foreground: 258 20% 95%;
+
+    --card: 258 20% 14%;
+    --card-foreground: 258 20% 95%;
+
+    --popover: 258 20% 14%;
+    --popover-foreground: 258 20% 95%;
+
+    --primary: 258 55% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 258 20% 18%;
+    --secondary-foreground: 258 20% 90%;
+
+    --muted: 258 15% 20%;
+    --muted-foreground: 258 15% 60%;
+
+    --accent: 45 85% 55%;
+    --accent-foreground: 258 25% 10%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 258 20% 95%;
+
+    --border: 258 15% 20%;
+    --input: 258 15% 22%;
+    --ring: 258 55% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out forwards;
+  }
+
+  .animate-fade-up-delayed {
+    animation: fade-up 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
