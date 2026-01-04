@@ -147,3 +147,4 @@ Vercel provides free SSL automatically. If you see "Not Secure":
 
 **Once DNS propagates, your PetPal website will be live at petpal24.co.uk!** 🎉
 
+

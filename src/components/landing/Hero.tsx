@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Apple, Bell } from "lucide-react";
 import appMockup from "@/assets/app-mockup.png";
+import WaitlistDialog from "@/components/landing/WaitlistDialog";
 
 const Hero = () => {
   return (
@@ -36,10 +37,12 @@ const Hero = () => {
                 <Apple className="w-5 h-5" />
                 Download on App Store
               </Button>
-              <Button variant="hero-outline" size="lg">
-                <Bell className="w-5 h-5" />
-                Join the Waitlist
-              </Button>
+              <WaitlistDialog variant="hero-outline" size="lg">
+                <Button variant="hero-outline" size="lg">
+                  <Bell className="w-5 h-5" />
+                  Join the Waitlist
+                </Button>
+              </WaitlistDialog>
             </div>
             
             <p className="text-sm text-muted-foreground">

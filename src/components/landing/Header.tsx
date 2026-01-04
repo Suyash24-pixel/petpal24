@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
+import WaitlistDialog from "@/components/landing/WaitlistDialog";
 
 const Header = () => {
   return (
@@ -21,9 +22,11 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button variant="hero-outline" size="sm" className="hidden sm:flex">
-            Join Waitlist
-          </Button>
+          <WaitlistDialog variant="hero-outline" size="sm">
+            <Button variant="hero-outline" size="sm" className="hidden sm:flex">
+              Join Waitlist
+            </Button>
+          </WaitlistDialog>
           <Button variant="default" size="sm">
             Download
           </Button>

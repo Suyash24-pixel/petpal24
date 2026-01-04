@@ -4,6 +4,7 @@ import Footer from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowLeft, Heart } from "lucide-react";
 import { getBlogPostById } from "@/data/blogPosts";
+import WaitlistDialog from "@/components/landing/WaitlistDialog";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -103,7 +104,9 @@ const BlogPost = () => {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <Button>Download on App Store</Button>
-                  <Button variant="outline">Join Waitlist</Button>
+                  <WaitlistDialog variant="outline" size="default">
+                    <Button variant="outline">Join Waitlist</Button>
+                  </WaitlistDialog>
                 </div>
               </div>
             </div>

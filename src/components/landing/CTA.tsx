@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Apple, Bell, Heart } from "lucide-react";
 import heroPets from "@/assets/hero-pets.jpg";
+import WaitlistDialog from "@/components/landing/WaitlistDialog";
 
 const CTA = () => {
   return (
@@ -35,10 +36,12 @@ const CTA = () => {
               <Apple className="w-5 h-5" />
               Download on App Store
             </Button>
-            <Button variant="hero-outline" size="lg">
-              <Bell className="w-5 h-5" />
-              Join the Waitlist
-            </Button>
+            <WaitlistDialog variant="hero-outline" size="lg">
+              <Button variant="hero-outline" size="lg">
+                <Bell className="w-5 h-5" />
+                Join the Waitlist
+              </Button>
+            </WaitlistDialog>
           </div>
           
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
