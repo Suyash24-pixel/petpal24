@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
-import { getOwnerNotificationEmail, getWelcomeEmail } from './email-templates';
+import { getOwnerNotificationEmail, getWelcomeEmail } from './email-templates.js';
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
