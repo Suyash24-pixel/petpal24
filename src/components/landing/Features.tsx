@@ -1,4 +1,4 @@
-import { Syringe, MapPin, Users, MessageCircle, Shield, Sparkles } from "lucide-react";
+import { Syringe, MapPin, Users, MessageCircle, Shield } from "lucide-react";
 
 const features = [
   {
@@ -35,14 +35,14 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-16 md:py-24 scroll-mt-24">
+    <section id="features" className="py-20 md:py-28 scroll-mt-24">
       <div className="container">
-        <div className="text-center mb-12 md:mb-16">
-          <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+        <div className="text-center mb-14 md:mb-20">
+          <span className="inline-block text-sm font-bold text-primary uppercase tracking-widest mb-4">
             Powerful Features
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Everything you need, nothing you don't
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-5 tracking-tight">
+            Life-skills for happy<br className="hidden md:block" /> & confident pets
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             From daily care to long-term health tracking, PetPal has you covered.
@@ -53,19 +53,19 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="relative bg-card rounded-2xl p-6 shadow-soft hover:shadow-card transition-all duration-300 border border-border/50 group"
+              className="relative bg-white rounded-3xl p-7 shadow-soft hover:shadow-card transition-all duration-300 border border-border/30 group hover:-translate-y-1"
             >
               {feature.badge && (
-                <span className="absolute top-4 right-4 text-xs font-semibold bg-purple/20 text-purple-dark px-2.5 py-1 rounded-full">
+                <span className="absolute top-5 right-5 text-xs font-bold bg-teal-light text-teal px-3 py-1.5 rounded-full">
                   {feature.badge}
                 </span>
               )}
               
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <feature.icon className="w-6 h-6 text-primary" />
+              <div className="w-14 h-14 rounded-2xl bg-coral-light flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <feature.icon className="w-7 h-7 text-primary" />
               </div>
               
-              <h3 className="text-lg font-bold text-foreground mb-2">
+              <h3 className="text-lg font-bold text-foreground mb-3">
                 {feature.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">

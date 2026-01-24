@@ -13,41 +13,35 @@ export default {
   		}
   	},
   	extend: {
-  		fontFamily: {
-  			sans: [
-  				'Montserrat',
-  				'ui-sans-serif',
-  				'system-ui',
-  				'-apple-system',
-  				'BlinkMacSystemFont',
-  				'Segoe UI',
-  				'Roboto',
-  				'Helvetica Neue',
-  				'Arial',
-  				'Noto Sans',
-  				'sans-serif'
-  			],
-  			serif: [
-  				'Cormorant Garamond',
-  				'ui-serif',
-  				'Georgia',
-  				'Cambria',
-  				'Times New Roman',
-  				'Times',
-  				'serif'
-  			],
-  			mono: [
-  				'IBM Plex Mono',
-  				'ui-monospace',
-  				'SFMono-Regular',
-  				'Menlo',
-  				'Monaco',
-  				'Consolas',
-  				'Liberation Mono',
-  				'Courier New',
-  				'monospace'
-  			]
-  		},
+		fontFamily: {
+			sans: [
+				'Plus Jakarta Sans',
+				'ui-sans-serif',
+				'system-ui',
+				'-apple-system',
+				'BlinkMacSystemFont',
+				'Segoe UI',
+				'Roboto',
+				'sans-serif'
+			],
+			serif: [
+				'Lora',
+				'ui-serif',
+				'Georgia',
+				'Cambria',
+				'Times',
+				'serif'
+			],
+			mono: [
+				'Space Mono',
+				'ui-monospace',
+				'SFMono-Regular',
+				'Menlo',
+				'Monaco',
+				'Consolas',
+				'monospace'
+			]
+		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
@@ -82,17 +76,24 @@ export default {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
-  			cream: {
-  				DEFAULT: 'hsl(var(--cream))',
-  				dark: 'hsl(var(--cream-dark))'
-  			},
-  			purple: {
-  				DEFAULT: 'hsl(var(--purple))',
-  				light: 'hsl(var(--purple-light))',
-  				dark: 'hsl(var(--purple-dark))',
-  				muted: 'hsl(var(--purple-muted))',
-  				accent: 'hsl(var(--purple-accent))'
-  			}
+			cream: {
+				DEFAULT: 'hsl(var(--cream))',
+				dark: 'hsl(var(--cream-dark))'
+			},
+			coral: {
+				DEFAULT: 'hsl(var(--coral))',
+				light: 'hsl(var(--coral-light))',
+				dark: 'hsl(var(--coral-dark))',
+				muted: 'hsl(var(--coral-muted))'
+			},
+			navy: {
+				DEFAULT: 'hsl(var(--navy))',
+				light: 'hsl(var(--navy-light))'
+			},
+			teal: {
+				DEFAULT: 'hsl(var(--teal))',
+				light: 'hsl(var(--teal-light))'
+			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

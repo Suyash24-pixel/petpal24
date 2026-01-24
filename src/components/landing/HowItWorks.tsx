@@ -1,4 +1,5 @@
-import { UserPlus, Activity, BellRing, ArrowRight } from "lucide-react";
+import { UserPlus, Activity, BellRing } from "lucide-react";
+import appMockup from "@/assets/app-mockup.png";
 
 const steps = [
   {
@@ -23,47 +24,77 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-16 md:py-24 bg-secondary/30">
-      <div className="container">
-        <div className="text-center mb-12 md:mb-16">
-          <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
-            Getting Started
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Three simple steps to happier pets
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            No complicated setup, no learning curve. Just download and go.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 md:gap-4 max-w-4xl mx-auto">
-          {steps.map((step, index) => (
-            <div key={index} className="relative flex flex-col items-center text-center group">
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary/30 to-primary/10" />
-              )}
-              
-              {/* Step number and icon */}
-              <div className="relative mb-6">
-                <div className="w-24 h-24 rounded-2xl bg-card shadow-card flex items-center justify-center group-hover:shadow-elevated transition-shadow border border-border/50">
-                  <step.icon className="w-10 h-10 text-primary" />
-                </div>
-                <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-purple text-white font-bold flex items-center justify-center text-sm shadow-soft">
-                  {step.number}
-                </span>
-              </div>
-              
-              <h3 className="text-xl font-bold text-foreground mb-2">
-                {step.title}
-              </h3>
-              <p className="text-muted-foreground max-w-xs">
-                {step.description}
-              </p>
+    <section className="py-20 md:py-28 bg-primary relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
+        <svg viewBox="0 0 400 600" className="w-full h-full" preserveAspectRatio="none">
+          <path 
+            d="M0,0 Q200,150 100,300 Q0,450 200,600 L400,600 L400,0 Z" 
+            fill="white"
+          />
+        </svg>
+      </div>
+      
+      <div className="container relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Phone mockup on left */}
+          <div className="relative flex justify-center order-2 lg:order-1">
+            <div className="relative">
+              <img 
+                src={appMockup} 
+                alt="PetPal app interface" 
+                className="w-[280px] md:w-[320px] drop-shadow-2xl animate-float"
+              />
             </div>
-          ))}
+          </div>
+          
+          {/* Steps on right */}
+          <div className="order-1 lg:order-2">
+            <span className="inline-block text-sm font-bold text-primary-foreground/80 uppercase tracking-widest mb-4">
+              Getting Started
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary-foreground mb-12 tracking-tight">
+              Three simple steps to happier pets
+            </h2>
+            
+            <div className="space-y-8">
+              {steps.map((step, index) => (
+                <div key={index} className="flex gap-5 group">
+                  {/* Step number */}
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                      <step.icon className="w-7 h-7 text-primary" />
+                    </div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div>
+                    <h3 className="text-xl font-bold text-primary-foreground mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-primary-foreground/80 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+      </div>
+      
+      {/* Bottom wave */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg 
+          viewBox="0 0 1440 80" 
+          className="w-full h-[40px] md:h-[60px]" 
+          preserveAspectRatio="none"
+        >
+          <path 
+            d="M0,20 Q360,60 720,30 T1440,50 L1440,80 L0,80 Z" 
+            fill="hsl(var(--background))"
+          />
+        </svg>
       </div>
     </section>
   );
