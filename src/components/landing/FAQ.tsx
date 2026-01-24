@@ -34,14 +34,14 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-16 md:py-24 bg-secondary/30 scroll-mt-24">
+    <section id="faq" className="py-20 md:py-28 scroll-mt-24">
       <div className="container">
-        <div className="text-center mb-12 md:mb-16">
-          <span className="inline-block text-sm font-semibold text-primary uppercase tracking-wider mb-4">
+        <div className="text-center mb-14 md:mb-20">
+          <span className="inline-block text-sm font-bold text-primary uppercase tracking-widest mb-4">
             Questions & Answers
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Got questions? We've got answers
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground mb-5 tracking-tight">
+            Got questions?<br className="hidden md:block" /> We've got answers
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Everything you need to know about PetPal. Can't find what you're looking for? 
@@ -55,12 +55,12 @@ const FAQ = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="bg-card rounded-xl border border-border/50 px-6 shadow-soft data-[state=open]:shadow-card transition-shadow"
+                className="bg-white rounded-2xl border border-border/30 px-6 shadow-soft data-[state=open]:shadow-card transition-all"
               >
-                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary hover:no-underline py-5">
+                <AccordionTrigger className="text-left font-bold text-foreground hover:text-primary hover:no-underline py-6 text-lg">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

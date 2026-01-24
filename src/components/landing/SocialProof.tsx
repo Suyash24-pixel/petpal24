@@ -2,31 +2,28 @@ import { Star } from "lucide-react";
 
 const SocialProof = () => {
   return (
-    <section className="py-8 md:py-12 bg-secondary/50 border-y border-border/50">
+    <section className="py-10 md:py-14 bg-white">
       <div className="container">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
-          {/* Trust text */}
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <div className="flex -space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-purple fill-purple" />
-              ))}
-            </div>
-            <span className="font-medium">Loved by busy pet parents and trusted by vets</span>
+        <p className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-widest mb-8">
+          As seen in
+        </p>
+        
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60">
+          <div className="text-lg md:text-xl font-bold text-foreground/80">PetCare Weekly</div>
+          <div className="text-lg md:text-xl font-bold text-foreground/80">The Guardian</div>
+          <div className="text-lg md:text-xl font-bold text-foreground/80">Vet Times</div>
+          <div className="text-lg md:text-xl font-bold text-foreground/80">Daily Mail</div>
+          <div className="hidden sm:block text-lg md:text-xl font-bold text-foreground/80">BBC Radio</div>
+        </div>
+        
+        <div className="mt-10 flex items-center justify-center gap-2">
+          <div className="flex -space-x-1">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 text-primary fill-primary" />
+            ))}
           </div>
-          
-          {/* Divider */}
-          <div className="hidden md:block w-px h-8 bg-border" />
-          
-          {/* Featured logos placeholder */}
-          <div className="flex items-center gap-6">
-            <span className="text-sm text-muted-foreground font-medium">Featured in</span>
-            <div className="flex items-center gap-4 opacity-60">
-              <div className="h-6 px-3 bg-muted rounded text-xs font-semibold flex items-center text-muted-foreground">PetCare Weekly</div>
-              <div className="h-6 px-3 bg-muted rounded text-xs font-semibold flex items-center text-muted-foreground">The Guardian</div>
-              <div className="hidden sm:flex h-6 px-3 bg-muted rounded text-xs font-semibold items-center text-muted-foreground">Vet Times</div>
-            </div>
-          </div>
+          <span className="font-semibold text-foreground ml-2">4.9</span>
+          <span className="text-muted-foreground">• Loved by 50,000+ pet parents</span>
         </div>
       </div>
     </section>
